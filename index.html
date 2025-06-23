@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário do Humor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Diário do Humor</h1>
+            <div id="welcome-message"></div>
+        </header>
+        
+        <div class="user-input">
+            <div class="emoji-selector">
+                <h2>Como você está hoje, <span id="username-display"></span>?</h2>
+                <div class="emoji-options">
+                    <button class="emoji-btn" data-emoji="😊" data-value="feliz">😊 Feliz</button>
+                    <button class="emoji-btn" data-emoji="😐" data-value="neutro">😐 Neutro</button>
+                    <button class="emoji-btn" data-emoji="😢" data-value="triste">😢 Triste</button>
+                    <button class="emoji-btn" data-emoji="😠" data-value="bravo">😠 Bravo</button>
+                    <button class="emoji-btn" data-emoji="😴" data-value="cansado">😴 Cansado</button>
+                    <button class="emoji-btn" data-emoji="😰" data-value="ansioso">😰 Ansioso</button>
+                    <button class="emoji-btn" data-emoji="😍" data-value="apaixonado">😍 Apaixonado</button>
+                </div>
+            </div>
+            
+            <div class="reason-input">
+                <label for="reason">Motivo:</label>
+                <textarea id="reason" placeholder="Por que você está se sentindo assim?"></textarea>
+            </div>
+            
+            <button id="save-btn">Salvar humor do dia</button>
+        </div>
+        
+        <div class="history-section">
+            <h2>Histórico da Semana</h2>
+            <div id="weekly-history"></div>
+            
+            <h2>Resumo do Humor</h2>
+            <div id="mood-summary"></div>
+        </div>
+    </div>
+
+    <div id="name-modal" class="modal">
+        <div class="modal-content">
+            <h2>Bem-vindo ao Diário do Humor!</h2>
+            <p>Por favor, digite seu nome para começar:</p>
+            <input type="text" id="name-input" placeholder="Seu nome" required>
+            <button id="submit-name">Continuar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
